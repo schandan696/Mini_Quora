@@ -1,0 +1,32 @@
+<% include ./partials/header %>
+<div class ="ui main text container"> 
+<div class="ui huge header"><h1>MinifiedQuora.</h1></div>
+<div class="ui top attached segment">
+
+<a href="/new"> <button class="fluid ui button"> What is your Question.</button> </a>
+<br/>
+
+<% blogs.forEach(function(blog){ %>
+<div class="item">
+	<div class="content">
+		<a class="header" href="/post/<%=blog._id%>" ><%= blog.title %> </a>
+		<div class="meta">
+			<span><%=blog.created.toDateString()%></span>
+		</div>
+		<div class="description">
+			<p><%- blog.body.substring(0, 100) %>...</p>
+		</div>
+		<div class="extra">
+			<a class="ui floated basic violet button" href="/post/<%=blog._id%>">Read More 
+			<i class="right chevron icon"></i></a><br/>
+		</div>
+	</div>	
+</div>
+<br/>
+<% }); %>
+
+</div>
+</div>
+
+
+<% include ./partials/footer %>

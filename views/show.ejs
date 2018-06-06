@@ -1,0 +1,13 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+	<div class="ui huge header"> <%= blog.title %> </div>
+	<span style="margin-left:15px"><%=blog.created.toDateString()%></span>
+	<p> <%= blog.body %> </p>
+	 
+	 <a class="ui orange basic button" href="/post/<%=blog._id%>/edit">Edit</a>
+	 <form id="delete"action="/post/<%=blog._id%>/delete" method="POST">
+	 	<button class="ui red basic button"> Delete </button>
+	 </form>
+</div>
+<% include ./partials/footer %>

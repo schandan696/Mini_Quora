@@ -1,0 +1,14 @@
+i.icon {
+	font-size: 2em;
+}
+
+body{
+	margin-top: 70px;
+}
+
+#delete{
+	display: inline;
+}
+a.anchor{
+	color: #555;
+}
